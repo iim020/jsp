@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>study</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>Test01_Servlet</servlet-name>
+		<servlet-class>com.p01_Servlet.Test01_Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Test01_Servlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Test02_Servlet</servlet-name>
+		<servlet-class>com.p01_Servlet.Test02_Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Test02_Servlet</servlet-name>
+		<url-pattern>/Test02_Servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Test03_Servlet</servlet-name>
+		<servlet-class>com.p01_Servlet.Test03_Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Test03_Servlet</servlet-name>
+		<url-pattern>/Test03_Servlet</url-pattern>
+	</servlet-mapping>
+</web-app>
