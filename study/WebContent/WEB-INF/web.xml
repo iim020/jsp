@@ -13,6 +13,16 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
+	<!-- <servlet> <servlet-name>OracleDriverLoader</servlet-name> <servlet-class>com.jdbc.OracleDriverLoader01</servlet-class> 
+		<load-on-startup>1</load-on-startup> </servlet> -->
+
+	<servlet>
+		<servlet-name>OracleDriverLoader</servlet-name>
+		<servlet-class>com.jdbc.OracleDriverLoader02</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+
 	<servlet>
 		<servlet-name>Test01_Servlet</servlet-name>
 		<servlet-class>com.p01_Servlet.Test01_Servlet</servlet-class>
@@ -21,7 +31,8 @@
 		<servlet-name>Test01_Servlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-	
+
+
 	<servlet>
 		<servlet-name>Test02_Servlet</servlet-name>
 		<servlet-class>com.p01_Servlet.Test02_Servlet</servlet-class>
@@ -30,7 +41,8 @@
 		<servlet-name>Test02_Servlet</servlet-name>
 		<url-pattern>/Test02_Servlet</url-pattern>
 	</servlet-mapping>
-	
+
+
 	<servlet>
 		<servlet-name>Test03_Servlet</servlet-name>
 		<servlet-class>com.p01_Servlet.Test03_Servlet</servlet-class>
@@ -39,4 +51,29 @@
 		<servlet-name>Test03_Servlet</servlet-name>
 		<url-pattern>/Test03_Servlet</url-pattern>
 	</servlet-mapping>
+
+
+	<context-param>
+		<description>설정 값에 대한 설명(필수 요소 아님)</description>
+		<param-name>ID</param-name>
+		<param-value>NextIT</param-value>
+	</context-param>
+
+
+	<context-param>
+		<description>설정 값에 대한 설명(필수 요소 아님)</description>
+		<param-name>subject</param-name>
+		<param-value>NextIT</param-value>
+	</context-param>
+
+
+	<session-config>
+		<!--분단위 -->
+		<session-timeout>30</session-timeout>
+		<!-- -1은 무제한 -->
+		<!--<session-timeout>-1</session-timeout> -->
+	</session-config>
+
+
+
 </web-app>

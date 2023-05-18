@@ -11,7 +11,7 @@
 
 	현재 프로젝트 루트 경로 : ${pageContext.request.contextPath }
 	<%
-		/*forward*/
+		/*forward 실행하면 02requst.jsp로 이동*/
 		pageContext.forward("02request.jsp");
 	%>
 

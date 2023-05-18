@@ -15,7 +15,16 @@
 <body>
 03request.jsp
 
+
 <%
+// getAttribute와 getParameter의 차이 
+// getAttribute는 object 반환
+// getParameter는 String 반환
+
+/* getParameter() 는 Client( Web Browser ) 에서 전송받은 request영역의 값을 가져옵니다.
+   getAttribute() 는 setAttribute() 를 통하여 값을 받아오는데, 
+   값이 입력되지 않는다면 무조건 null 값입니다.*/
+
 String str = (String)request.getAttribute("str");
 System.out.println("str :" + str);
 
@@ -24,12 +33,13 @@ System.out.println("num :" + num);
 %>
 
 <%
+//
 String memId = request.getParameter("memId");
 String memPass = request.getParameter("memPass");
 
 System.out.println("memPass:" + memPass);
 
-if(memId != null && memPass !=null && ! memId.equals("") && ! memPass.equals("")) {
+if(memId != null && memPass != null && ! memId.equals("") && ! memPass.equals("")) {
 	System.out.println("로그인 처리되었습니다.");
 	request.setAttribute("login", true);
 }else{
@@ -49,7 +59,7 @@ if(memId != null && memPass !=null && ! memId.equals("") && ! memPass.equals("")
 </c:choose>
 
 <%
-Map<String, String[] > paramMap = request.getParameterMap();
+Map<String, String[]> paramMap = request.getParameterMap();
 
 
 Set<String> keySet = paramMap.keySet();
